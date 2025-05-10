@@ -1,0 +1,208 @@
+.my-bookings-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookings-header {
+  margin-bottom: 30px;
+}
+
+.bookings-header h1 {
+  font-size: 2rem;
+  color: #2d3748;
+}
+
+.bookings-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab-btn:hover {
+  color: #4a5568;
+}
+
+.tab-btn.active {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4a5568;
+}
+
+.bookings-content {
+  min-height: 400px;
+}
+
+.bookings-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.bookings-list,
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.booking-card,
+.order-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.booking-card:hover,
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-header,
+.order-header {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-header h3,
+.order-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.status.confirmed {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.status.ordered {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.booking-details,
+.order-details {
+  padding: 15px;
+}
+
+.booking-detail,
+.order-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.booking-detail.total,
+.order-detail.total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.booking-detail.total .detail-value,
+.order-detail.total .detail-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+.booking-footer,
+.order-footer {
+  padding: 15px;
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.no-bookings,
+.no-orders {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-bookings p,
+.no-orders p {
+  margin-bottom: 20px;
+  color: #718096;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  background-color: #4a5568;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #2d3748;
+}
+
+@media screen and (max-width: 768px) {
+  .bookings-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .booking-card,
+  .order-card {
+    width: 100%;
+  }
+}
